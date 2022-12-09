@@ -86,7 +86,7 @@ def send_newbie_message_handler(msg: MessageEvent, cardinal: Cardinal, *args) ->
     OLD_USERS.append(msg.sender_username)
     save_newbies_to_cache(OLD_USERS)
 
-    new_msg_object = MessageEvent(msg.node_id, text, msg.sender_username, None, None)
+    new_msg_object = MessageEvent(msg.node_id, text, msg.sender_username, None)
     cardinal.send_message(new_msg_object)
 
 
