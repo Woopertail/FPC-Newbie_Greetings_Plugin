@@ -38,7 +38,7 @@ def load_newbies_from_cache() -> list[str]:
 
     :return: список никнеймов пользователей.
     """
-    if not os.path.exists("storage/cache/newbie_detect_plugin.json"):
+    if not os.path.exists("storage/cache/newbie_detect_plugin_cache.json"):
         return []
     with open("storage/cache/newbie_detect_plugin_cache.json", "r", encoding="utf-8") as f:
         users = f.read()
